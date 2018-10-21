@@ -1,0 +1,7 @@
+
+<!--miniprogram/pages/mainfunction/mainfunction.wxml-->
+  <view class="uploader">
+    <view class="uploader-text">
+      <text>您的数据已经成功上传，1个工作日内我们会电话联系您，请保持电话畅通</text>
+    </view>
+ </view>

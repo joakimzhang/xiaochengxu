@@ -1,0 +1,38 @@
+<!--miniprogram/pages/mainfunction/mainfunction.wxml-->
+  <view class="uploader">
+    <view class="uploader-text" bindtap="doUpload">
+      <text>上传病理报告</text>
+    </view>
+    <view class="list-item">
+      <text class="request-text">云文件路径：{{cloudPath}}</text>
+    </view>
+    <view class="list-item">
+      <image class="image1" src="{{imagePath}}" mode="aspectFit"></image>
+      <image class="image1" src="{{filePath}}" mode="aspectFit"></image>
+       <image class="image1" src="{{imgUrl}}" mode="aspectFit"></image>
+      
+    </view>
+
+  <view class="uploader-container" wx:if="{{imgUrl}}">
+      <image class="uploader-image" src="{{imgUrl}}" mode="aspectFit" bindtap="previewImg"></image>
+    </view>
+
+  </view>
+
+    <view class="uploader">
+    <view class="uploader-text" bindtap="doUpload">
+      <text>上传其他检查报告</text>
+    </view>
+    <view class="uploader-container" wx:if="{{imgUrl}}">
+      <image class="uploader-image" src="{{imgUrl}}" mode="aspectFit" bindtap="previewImg"></image>
+    </view>
+  </view>
+
+    <view class='button'>
+    <navigator url="../welcomfunction/welcomfunction" open-type="navigate" class="uploader-text">
+      <button type='primary' form-type='submit' bindtap="onAdd" url="../welcomfunction/welcomfunction">下一步</button>
+    </navigator>
+    </view>
+
+
+

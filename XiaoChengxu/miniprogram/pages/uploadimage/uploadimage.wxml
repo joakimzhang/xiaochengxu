@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<view class="container">
+
+<view class="uploader-text" bindtap="upload">
+  <text>上传病理报告</text>
+</view>
+
+  <block wx:for="{{tempFilePaths}}" wx:key="{{index}}">
+  <image src="{{item }}" bindtap="listenerButtonPreviewImage" data-index="{{index}}" style="width: 100%;"/>
+  </block>
+</view>
+
+<view class="container">
+<view class="uploader-text" bindtap="upload2">
+  <text>上传其他报告</text>
+</view>
+
+  <block wx:for="{{tempFilePaths2}}" wx:key="{{index}}">
+  <image src="{{item }}" bindtap="listenerButtonPreviewImage2" data-index="{{index}}" style="width: 100%;"/>
+  </block>
+
+</view>
+
+    <view class='button' wx:if="{{tempFilePaths.length}}">
+    <navigator url="../welcomfunction/welcomfunction" open-type="navigate" class="uploader-text">
+      <button type='primary' form-type='submit' url="../welcomfunction/welcomfunction">下一步</button>
+    </navigator>
+    </view>
